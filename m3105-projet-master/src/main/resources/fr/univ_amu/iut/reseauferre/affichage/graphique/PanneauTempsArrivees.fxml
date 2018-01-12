@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="TOP_CENTER" prefWidth="690.0"
+      xmlns="http://javafx.com/javafx/8.0.121"
+      fx:controller="fr.univ_amu.iut.reseauferre.affichage.graphique.PanneauTempsArrivees">
+    <children>
+        <Label fx:id="labelTitle" text="Panneau des temps des arrivées">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="colonneGare" prefWidth="75.0" text="Gare"/>
+                <TableColumn fx:id="colonneDepart" prefWidth="75.0" text="Arrivée"/>
+                <TableColumn fx:id="colonneProvenance" prefWidth="75.0" text="Provenance"/>
+                <TableColumn fx:id="colonneDestination" prefWidth="75.0" text="Destination"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+    </children>
+</VBox>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+
+<Accordion xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121"
+           fx:controller="fr.univ_amu.iut.reseauferre.affichage.graphique.EtatGeneral">
+    <panes>
+        <TitledPane alignment="TOP_CENTER" text="Gares">
+            <content>
+                <TableView fx:id="tableviewGare" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="viewGareGare" prefWidth="451.0" text="Gares"/>
+                        <TableColumn fx:id="viewGareSubventionnees" prefWidth="147.0" text="Subventionnée"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </content>
+        </TitledPane>
+        <TitledPane alignment="CENTER" text="Entreprises Ferroviaires">
+            <content>
+                <TableView fx:id="tableViewEntrepriseF" editable="true" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="viewEntrepriseNom" prefWidth="75.0" text="Nom"/>
+                        <TableColumn fx:id="viewEntrepriseSiren" prefWidth="75.0" text="SIREN"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </content>
+        </TitledPane>
+        <TitledPane alignment="TOP_CENTER" text="Trains">
+            <content>
+                <TableView fx:id="TableViewTrain" editable="true" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="positionTrain" prefWidth="75.0" text="Position"/>
+                        <TableColumn fx:id="proprietaireTrain" prefWidth="75.0" text="Propriétaire"/>
+                        <TableColumn fx:id="prixTrain" prefWidth="75.0" text="Prix"/>
+                        <TableColumn fx:id="vitesseMaxTrain" prefWidth="75.0" text="Vitesse Maximum"/>
+                        <TableColumn fx:id="typeTrain" prefWidth="75.0" text="Type"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </content>
+        </TitledPane>
+        <TitledPane alignment="CENTER" text="Lignes Ferroviaire">
+            <content>
+                <TableView fx:id="ligneFerro" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="ligneDepart" prefWidth="75.0" text="Gare de départ"/>
+                        <TableColumn fx:id="ligneArrive" prefWidth="75.0" text="Gare d'arrivée"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </content>
+        </TitledPane>
+        <TitledPane alignment="TOP_CENTER" text="Trajets">
+            <content>
+                <TableView fx:id="trajetTableView" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="trajetsTrain" prefWidth="75.0" text="Train"/>
+                        <TableColumn fx:id="sillonsTrajet" prefWidth="75.0" text="Sillons empruntés"/>
+                        <TableColumn fx:id="lignesTrajet" prefWidth="75.0" text="Lignes ferroviaires traversées"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </content>
+        </TitledPane>
+        <TitledPane alignment="CENTER" text="Sillons">
+            <content>
+                <TableView fx:id="sillonTableView" editable="true" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="sillonsHeure" prefWidth="75.0" text="Heure"/>
+                        <TableColumn fx:id="sillonLigne" prefWidth="75.0" text="Ligne"/>
+                        <TableColumn fx:id="sillonDisponible" editable="false" prefWidth="75.0" text="Disponible"/>
+                        <TableColumn fx:id="sillonCoutDUtilisation" prefWidth="75.0" text="Cout d'utilisation"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </content>
+        </TitledPane>
+    </panes>
+</Accordion>
